@@ -1,0 +1,119 @@
+@import "./index.scss";
+
+.OrderSummary {
+  width: 380px;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+
+  &-imgContainer img {
+    width: 100%;
+    display: block;
+  }
+
+  &-content {
+    padding: 40px 30px;
+
+    &__title {
+      text-align: center;
+      margin-bottom: 15px;
+      color: $Dark-blue;
+      font-weight: 900;
+      font-size: 2.6rem;
+    }
+
+    &__subtext {
+      text-align: center;
+      margin-bottom: 15px;
+      color: $Desaturated-blue;
+      line-height: 1.5;
+    }
+
+    &__purchase {
+      background-color: $Very-pale-blue;
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+
+      &-text {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+
+        &__year {
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+
+          &-span-1 {
+            font-weight: 700;
+            color: $Dark-blue;
+          }
+
+          &-span-2 {
+            color: $Desaturated-blue;
+          }
+        }
+      }
+
+      &-link {
+        & a {
+          color: $Bright-blue;
+          font-size: 1.4rem;
+          font-weight: 700;
+          transition: color 0.3s;
+
+          &:hover {
+            color: hsl(245, 75%, 65%);
+          }
+        }
+      }
+    }
+
+    &__btn {
+      background-color: $Bright-blue;
+      width: 100%;
+      border: none;
+      color: #fff;
+      font-weight: 700;
+      font-family: inherit;
+      font-size: 1.5rem;
+      padding: 13px 0;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px 5px hsl(225, 100%, 84%);
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: hsl(245, 75%, 65%);
+      }
+    }
+
+    &__link {
+      text-align: center;
+
+      & a {
+        font-weight: 900;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: $Desaturated-blue;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $Dark-blue;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 376px) {
+  .OrderSummary {
+    width: 90%;
+  }
+}
